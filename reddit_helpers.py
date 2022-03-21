@@ -17,14 +17,19 @@ def select_selector(p, selector):
 def say_hello():
     print('Hello')
 
-say_hello()
+#say_hello()
 
 def two_sum(n1,n2):
     print(n1+n2)
 
-two_sum(11,10)
+#two_sum(11,10)
 
 def your_name(n):
     print('Your name is: ',n)
 
-your_name('Akshay')
+#your_name('Akshay')
+
+#wiki_helpers.py
+def element_text(locator):
+    inner = locator.inner_text(timeout=0)
+    print(inner)

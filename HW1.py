@@ -9,17 +9,17 @@ with sync_playwright() as p:
     page.click('button[type="submit"]')
     page.click('text="Eden Gardens"')'''
     #HW2
-    page.goto("https://playwright.dev/") #page1
+    #page.goto("https://playwright.dev/") #page1
     #print(page.title())
     #page.click('.header-github-link') #New page. page#2
     #page.context.wait_for_event(page)
     # Get popup after a specific action (e.g., click)
-    with page.expect_popup() as popup_info:
+    '''with page.expect_popup() as popup_info:
         page.click('.header-github-link')
     popup = popup_info.value
 
     popup.wait_for_load_state()
-    print(popup.title())
+    print(popup.title())'''
 
     #new_window=window.value
     #page.is_visible()
@@ -48,7 +48,7 @@ with sync_playwright() as p:
     #loc1=page.locator("a[href^='/search?q=cats&source=lnms&tbm']").nth(0)
     #loc1=page.locator('text="Images"')
     #loc1.click()
-    page.wait_for_load_state()
+    #page.wait_for_load_state()
     #page.wait_for_timeout(2000)
     '''page.screenshot(path='cats.png')
     print(page.url)
@@ -56,4 +56,15 @@ with sync_playwright() as p:
         print('Wrong URL')
     else:
         print('Right URL')'''
+    #HW5
+    #page.goto('https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_checkbox')
+    #locator = page.locator('#vehicle1')
+
+    page.goto('https://smartwebby.com/PHP/Phptips2.asp')
+    locator = page.locator('input[type="checkbox"]')
+    #locator.check()
+    #locator.nth(3).click()
+    locator.nth(0).check()
+    number = locator.count()
+    print(number)
     browser.close()
